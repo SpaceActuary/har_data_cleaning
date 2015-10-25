@@ -49,13 +49,17 @@ The training / test split created by the original dataset's authors. A character
 The remainder of the variables use abbreviated names in an attempt to balance clarity with efficiency. The abbreviations used are:
   - "t" to indicate a variable on the "time" domain
   - "f" to indicate "frequency" domain variables
-  - "Acc" to indicate a measurement from the phone's accelerometer
+  - "Acc" to indicate a measurement from the phone's accelerometer. 
   - "Gyro" to indicate a measurement from the phone's gyroscope (angular) sensor
   - "Jerk" to indicate the derivative of acceleration, or how fast "the change in speed" is changing
   - "Mag" to indicate the magnitude (size) of the measurement
   - "Mean" to indicate that the mean or average of the measurement was taken
   - "StdDev" to indicate that the standard deviation of the measurement was taken
   - "X", "Y", or "Z" to indicate the axis along which the measurement took place
+
+Per the README.txt file included with the original data:
+ - Measurements from the accelerometer ("Acc") are in standard gravity units "g". 
+ - Measurements from the gyroscope ("Gyro") are in radians per second. 
 
 The full list of measurement variables includes:
   - tBodyAccMeanX
