@@ -23,11 +23,20 @@ To set up your R environment before running the script, make sure that both the 
             activity_labels.txt
             ...
 
-Finally, run the R script, which will create two datasets in the working directory:
-  1. har_tidy.txt - the "tidy" dataset, with mean and std. deviations of measurements, along with identifying information about each set of measurements.
-  2. har_summary.txt - a second "tidy" dataset, this one containing the average measurements by subject and activity.
+Finally, run the R script, which will do the following:
 
-For more information on the contents of these datasets, see the included CodeBook.md.
+  1. Read in the X (measurement), Y (activity), and subject datasets for both the train and test partitions.
+  2. Merge the 6 datasets above into a single dataset
+  3. Re-label the activities using meaningful descriptions instead of coded values.
+  4. Remove some of the measurement variables (any that aren't the mean or standard deviation).
+  5. Add meaningful variable names, based on the "features.txt" metadata included with the original datasets.
+    - Measurement variable names are abbreviated, to avoid being too long.
+    - Some of the variable names appear to have included typos (e.g. "BodyBody") which have been corrected.
+  6. Create two datasets in the working directory:
+    1. har_tidy.txt - the "tidy" dataset, with mean and std. deviations of measurements, along with identifying information about each set of measurements.
+    2. har_summary.txt - a second "tidy" dataset, this one containing the average measurements by subject and activity.
+
+  For more information on the contents of these datasets, see the included CodeBook.md.
 
 #### Citations:
 [1] Wickham, H. Tidy Data. Retrieved October 25, 2015, from http://vita.had.co.nz/papers/tidy-data.pdf
